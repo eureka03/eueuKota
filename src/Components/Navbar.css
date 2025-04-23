@@ -1,33 +1,97 @@
 .navbar{
     background-color:#ff5722;
-    color:white;
     padding:1rem 2rem;
-    display:flex;
-    justify-content:space-between;
     align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
 
 }
-.logo{
-    font-size:1.5rem;
-    font-weight:bold;
+.navbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+    position:relative;
 }
+.logo a{
+    color:white;
+    font-size:1.8rem;
+    font-weight:bold;
+    text-decoration: none;
+    font-family:'Poppins',sans-serif;
+}
+.logo span{
+    color:#fffe07;
+}
+
 .nav-links{
-    list-style:none;
     display:flex;
     gap:2rem;
 }
 
-.nav-links li a{
+.nav-links a{
     color:white;
     text-decoration:none;
     font-weight:500;
-    transition:color 0.3s ease;
+    transition:0.3s ;
+    font-size:1.1rem;
+    position:relative;
+}
+.nav-links a::after{
+    content:'';
+    height:3px;
+    background:white;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    transition:0.3s ease-in-out;
 }
 
-.nav-links li a.hover{
+.nav-links li a.hover::after{
     color:#ffccbc;
+}
+.hamburger{
+    display:none;
+    cursor:pointer;
+    flex-direction:column;
+    gap:6px;
+}
+.hamburger .bar{
+    width:25px;
+    height:3px;
+    background:white;
+    border-radius:5px;
+    transition:0.4s;
+}
+@media(max-width:768px){
+    .nav-links{
+        position:absolute;
+        top:100%;
+        right:0;
+        background:#ff5722;
+        flex-direction:column;
+        width:200px;
+        padding:1rem;
+        border-radius:10px;
+        transform:scaleY(0);
+        transform-origin:top;
+        transition:transform 0.3s ease-in-out;
+        opacity:0;
+        pointer-events:none;
+    }
+    .nav-links.open{
+        transform:scaleY(1);
+        opacity:1;
+        pointer-events:auto;
+    }
+    .bar.open{
+        transform:rotate(45deg);
+    }
+    .hamburger{
+        display:flex;
+    }
 }
