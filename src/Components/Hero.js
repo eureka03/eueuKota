@@ -15,11 +15,11 @@ export default function Hero(){
                         <h1>Bold Flavors, Big Kotas</h1>
                         <p>Satisfy your hunger with the most loaded and legendary kotas in town</p>
                         <motion.a
-                            href='/Order'
+                            href='/About'
                             className="hero-btn"
                             whileHover={{scale:1.05}}
                             whileTap={{scale:0.95}}>
-                            Order Now
+                            Learn More
                         </motion.a>
                     </motion.div>
                     <motion.img

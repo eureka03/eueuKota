@@ -10,10 +10,19 @@ export default function About(){
             initial={{x:100,opacity:0}}
             whileInView={{x:0,opacity:1}}
             transition={{duration:1}}>
-        <h2>About EuEuKota</h2>
-        <p>We serve the juiciest,cheesiest, mouth-watering Kotas in town! Fresh ingredients, bold flavors - 
-             all made with love.</p>
-        
+        <div className="about-content">
+            <h2>About <span>EuEuKota</span></h2>
+            <p>EuEuKota is not just a food business - it's a taste revolution. Fouded with passion for bold flavours and kasi
+                culture, we serve the freshest, most fire kotas in town.
+            </p>
+            <p>
+                Every bite is made with love, spice and a whole lot of vibe. Whether you're a beef lover, a cheese fan, or just hungry
+                , we've got something hot waiting for you.
+            </p>
+            <p>
+                Born in the heart of the community. Built by hustle. Powered by flavour.
+            </p>
+        </div>
         </motion.section>
     )
 }

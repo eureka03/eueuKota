@@ -17,7 +17,8 @@ export default function Order(){
     };
     const handleSubmit = (e) =>{
         e.preventDefault();
-        alert(`Thank you,${form.name}! Your order for ${form.kotaType} has been recieved.`);
+        alert(`Thank you,${form.name}! Your Message has been recieved.
+            We shall get back to you`);
         console.log(form);
         setForm({name:'',phone:'',kotaType:'',extras:''});
     };
@@ -27,22 +28,16 @@ export default function Order(){
             <section className="order-section">
                 
                 <form onSubmit={handleSubmit} className="order-form">
-                    <h2>Place Your Order</h2>
+                    <h2>Contact Us</h2>
                     <input type="text" name="name" value={form.name} placeholder="Your name" onChange={handleChange} required/>
                     <input type="tel" name="phone" value={form.phone} placeholder="Phone Number" onChange={handleChange} required/>
-                    <select name="kotaType" value={form.kotaType} onChange={handleChange} required>
-                        <option value="">Select Kota Type</option>
-                        <option value="Beef Kota">Beef Kota</option>
-                        <option value="Chicken Kota">Chicken Kota</option>
-                        <option value="Russian & Cheese Kota">Russian & Cheese Kota</option>
-                    </select>
+                    
                     <textarea
                      name="extras"
                      value={form.extras}
-                     placeholder="Any extras or notes"
+                     placeholder="How can we assist you?"
                      onChange={handleChange}/>
-                     <button type="submit">Submit Order</button>
-                    
+                     <button type="submit">Submit</button>
                 </form>
             </section>
         </section>

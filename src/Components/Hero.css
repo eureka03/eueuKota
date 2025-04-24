@@ -50,26 +50,28 @@
     line-height:1.6;
     margin-bottom:2rem;
 }
+
 @media(min-width:1300px){
+    
     .hero-section{
         padding:5rem 2rem;
         background:linear-gradient(135deg,#ff9800,#ff5722);
         color:white;
         display:flex;
-        justify-content: center;
-        align-items:center;
+        
     }
+    
     .hero-content{
         display:flex;
         flex-wrap:wrap;
         align-items:center;
         justify-content:space-between;
-        max-width:1200px;
+        max-width:1500px;
         margin:auto;
-        gap:18rem;
+        gap:20rem;
         height:72vh;
-    
     }
+
     .hero-image{
         width:450px;
         border-radius:20px;
