@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import './Order.css';
+import './Contact.css';
 
 export default function Order(){
     const [form,setForm] = useState({
