@@ -1,0 +1,122 @@
+.order-section{
+    min-height:73vh;
+    display:flex;
+    justify-content:center;
+    background:linear-gradient(to right, #ff5722,#ff9800);
+    font-family:'Poppins',sans-serif;
+    padding-top:50px;
+}
+.order-form{
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.1);
+    border:2px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:3rem;
+    width:100%;
+    max-width:500px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.2);
+    color:white;
+    animation:fadeInUp 0.6s ease;
+}
+.order-form h2{
+    font-size:2rem;
+    /*margin-bottom:2rem;*/
+    text-align:center;
+    color:#fff;
+}
+
+.order-form input,.order-form select,.order-form textarea{
+    background:rgba(255,255,255,0.2);
+    border:none;
+    border-radius:12px;
+    padding:1rem;
+    margin-bottom:1.2rem;
+    color:white;
+    font-size:1rem;
+    width:100%;
+    transition:0.3s ease-in-out;
+}
+.order-form input:focus,.order-form select:focus,.order-form textarea:focus{
+    outline:none;
+    box-shadow:0 0 10px rgba(255,255,255,0.3);
+}
+.order-form button{
+    padding:1rem;
+    background-color:#fff;
+    color:#ff5722;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition: 0.3s ease;
+    width:100%;
+    box-shadow:0 4px 12px rgba(100,50,100,0.9);
+}
+.order-form button:hover{
+    
+    background-color:#ffe0b2;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@media (min-width:770px) and (max-width:1299px){
+    .order-form{
+        backdrop-filter:blur(15px);
+        background:rgba(255,255,255,0.1);
+        border:2px solid rgba(255,255,255,0.2);
+        border-radius:20px;
+        max-width:400px;
+        box-shadow:0 8px 30px rgba(0,0,0,0.2);
+        color:white;
+        animation:fadeInUp 0.6s ease;
+        height:300px;
+    }
+    .order-form h2{
+        font-size:20px;
+        /*margin-bottom:2rem;*/
+        text-align:center;
+        color:#fff;
+    }
+    .order-form input,.order-form textarea{
+        background:rgba(255,255,255,0.2);
+        border:none;
+        border-radius:12px;
+        padding:1rem;
+        margin-bottom:1.2rem;
+        color:white;
+        font-size:1rem;
+        width:70%;
+        transition:0.3s ease-in-out;
+        display:flex;
+        margin:10px auto;
+    }
+    .order-form input:focus,.order-form select:focus,.order-form textarea:focus{
+        outline:none;
+        box-shadow:0 0 10px rgba(255,255,255,0.3);
+    }
+    .order-form button{
+        padding:1rem;
+        background-color:#fff;
+        color:#ff5722;
+        font-weight:bold;
+        border:none;
+        border-radius:12px;
+        cursor:pointer;
+        transition: 0.3s ease;
+        width:50%;;
+        box-shadow:0 4px 12px rgba(100,50,100,0.9);
+        display:flex;
+        margin:10px auto;
+    }
+    .order-form button:hover{
+        
+        background-color:#ffe0b2;
+    }
+}

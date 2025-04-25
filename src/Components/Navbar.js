@@ -20,7 +20,7 @@ export default function Navbar(){
                     }                       
                     <Link to='/'>Home</Link>
                     <Link to='/About'>About</Link>
-                    <Link to='/Order'>Contact</Link>
+                    <Link to='/Contact'>Contact</Link>
                     <Link to='/Menu'>Menu</Link>
                 </div>
                 <div className="hamburger" onClick={toggleMenu}>
