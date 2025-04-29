@@ -1,5 +1,5 @@
 .order-section{
-    min-height:73vh;
+    height:852px;
     display:flex;
     justify-content:center;
     background:linear-gradient(to right, #ff5722,#ff9800);
@@ -17,6 +17,8 @@
     box-shadow:0 8px 30px rgba(0,0,0,0.2);
     color:white;
     animation:fadeInUp 0.6s ease;
+    height:450px;
+
 }
 .order-form h2{
     font-size:2rem;
