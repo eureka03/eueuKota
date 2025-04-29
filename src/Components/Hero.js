@@ -12,7 +12,9 @@ export default function Hero(){
                         initial={{x:-100, opacity:0}}
                         animate={{x:0,opacity:1}}
                         transition={{duration:1}}>
-                        <h1>Bold Flavors, Big Kotas</h1>
+                        <motion.h1
+                            initial={{scale:1}}
+                            whileHover={{scale:1.1}}>Bold Flavors, Big Kotas</motion.h1>
                         <p>Satisfy your hunger with the most loaded and legendary kotas in town</p>
                         <motion.a
                             href='/About'
@@ -28,9 +30,9 @@ export default function Hero(){
                         className="hero-image"
                         initial ={{x:100,opacity:0}}
                         animate={{x:0, opacity:1}}
-                        transition={{duration:1}}>
+                        transition={{duration:1}}
+                    >
                     </motion.img>
-                    
                 </div>
             </section>
         
