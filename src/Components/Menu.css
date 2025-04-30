@@ -1,0 +1,18 @@
+.menu-images{
+    width:280px;
+    height:270px;
+    display:block;
+    margin:30px;
+}
+.Menu{
+    display:flex;
+}
+.description{
+    margin:30px;
+}
+.quantity{
+    width:60px;
+    margin-left:30px;
+    height:30px;
+    text-align:center;
+}
