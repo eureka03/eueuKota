@@ -39,7 +39,7 @@ export default function Menu(){
         setQuantity(e.target.value);
     }
     return(
-        <>   
+        <div className="Menu-config">   
               {Images.map((i)=>
                     <div className="Menu">
                         <div className="images">
@@ -56,7 +56,7 @@ export default function Menu(){
                 )}
             
            
-        
-        </>
+
+        </div>
     )
 }
