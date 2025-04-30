@@ -2,10 +2,13 @@
     width:380px;
     height:270px;
     margin:20px;
+    background-blend-mode: lighten;
+
 }
 .Menu-config{
     display:flex;
     flex-wrap: wrap;
+    
 }
 .description{
     margin:30px;
