@@ -1,0 +1,13 @@
+h2{
+    text-align:center;
+    margin:0;
+    color:white;
+}
+.Thankyou{
+    background:linear-gradient(to right, #ff5722,#ff9800);
+    height:480px;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
