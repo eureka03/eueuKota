@@ -1,5 +1,5 @@
 .order-section{
-    height:852px;
+    height:430px;
     display:flex;
     justify-content:center;
     background:linear-gradient(to right, #ff5722,#ff9800);
@@ -7,7 +7,7 @@
     padding-top:50px;
 }
 .order-form{
-    backdrop-filter:blur(15px);
+    
     background:rgba(255,255,255,0.1);
     border:2px solid rgba(255,255,255,0.2);
     border-radius:20px;
@@ -70,7 +70,6 @@
 }
 @media (min-width:770px) and (max-width:1299px){
     .order-form{
-        backdrop-filter:blur(15px);
         background:rgba(255,255,255,0.1);
         border:2px solid rgba(255,255,255,0.2);
         border-radius:20px;
@@ -120,5 +119,15 @@
     .order-form button:hover{
         
         background-color:#ffe0b2;
+    }
+}
+@media (min-width:1299px){
+    .order-section{
+        height:750px;
+        display:flex;
+        justify-content:center;
+        background:linear-gradient(to right, #ff5722,#ff9800);
+        font-family:'Poppins',sans-serif;
+        padding-top:50px;
     }
 }

@@ -38,6 +38,7 @@ export default function Menu(){
     const handleChange = (e) =>{
         setQuantity(e.target.value);
     }
+    
     return(
         <div className="Menu-config">   
               {Images.map((i)=>

@@ -59,10 +59,10 @@
         
     }
     .hero-image{
-        width:450px;
+        width:680px;
         border-radius:20px;
         box-shadow:0 10px 30px rgba(100,200,0,0.3);
-        height:380px;
+        height:550px;
     }
     .hero-content{
         display:flex;
@@ -70,7 +70,7 @@
         
         justify-content:space-between;
         max-width:1200px;
-        margin:5px auto;
+        margin:2px auto;
         height:105.5vh;
     
     }
@@ -108,7 +108,7 @@
         max-width:1500px;
         margin:auto;
         gap:20rem;
-        height:72vh;
+        height:67.7vh;
     }
 
     .hero-image{

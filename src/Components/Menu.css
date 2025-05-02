@@ -19,3 +19,22 @@
     height:30px;
     text-align:center;
 }
+@media(min-width:1300px){
+    .menu-images{
+        width:430px;
+        height:290px;
+        margin:20px;
+        background-blend-mode: lighten;
+    
+    }
+   
+}
+@media(max-width:768px){
+    .menu-images{
+        width:720px;
+        height:490px;
+        margin:20px;
+        background-blend-mode: lighten;
+    
+    } 
+}
