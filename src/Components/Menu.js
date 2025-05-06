@@ -3,37 +3,78 @@ import Kota2 from '../Assets/Kota2.jpg';
 import Kota3 from '../Assets/Kota3.jpg';
 import Kota4 from '../Assets/Kota4.jpg';
 import './Menu.css';
-import { FaCartPlus } from "react-icons/fa";
+import MenuItem from './MenuItem';
+
 import {useState} from 'react';
 
 export default function Menu(){
     const [quantity,setQuantity] = useState(0);
+    const [items,setItems] = useState([]);
 
     const Images = [
         {
+            id:1,
             name:'Kota1',
             src:Kota1,
-            price:30.45
+            price:30.45,
+            quantity:quantity
         },
         {
+            id:2,
             name:'Kota2',
             src:Kota2,
-            price:50.65
+            price:50.65,
+            quantity:quantity
         },
         {
+            id:3,
             name:'Kota3',
             src:Kota3,
-            price:23.56
+            price:23.56,
+            quantity:quantity
         },
         {
+            id:4,
             name:'Kota4',
             src:Kota4,
-            price:25.54
+            price:25.54,
+            quantity:quantity
         }
     ];
 
     const handleClick = (i) =>{
-        setQuantity(i.quantity+1);
+       const items1 = []
+        if(items1.length===0){
+            const newItem = {
+                id:i.id,
+                name:i.name,
+                src:i.src,
+                price:i.price,
+                quantity:i.quantity
+           }
+           items1.push(newItem);
+           setItems(items1);
+        }
+        else{ 
+            for (let j=0;j<items1.length;j++){
+                if(i.id===items1[j].id){
+                    setQuantity(Number(i.quantity)+1);
+                }else{
+                    const newItem = {
+                        id:i.id,
+                        name:i.name,
+                        src:i.src,
+                        price:i.price,
+                        quantity:i.quantity
+                }
+                items1.push(newItem);
+                setItems(items1);
+            
+                }
+            }
+        }
+       
+       console.log(items1);
     }
     const handleChange = (e) =>{
         setQuantity(e.target.value);
@@ -42,22 +83,8 @@ export default function Menu(){
     return(
         <div className="Menu-config">   
               {Images.map((i)=>
-                    <div className="Menu">
-                        <div className="images">
-                            <img src={i.src} alt = 'Kota' class='menu-images'/>
-                        </div>
-                        <div className="description">
-                            <p>Name: {i.name}</p>
-                            <p>Ingredients: </p>
-                            <p>Price: R{i.price}</p>
-                            <FaCartPlus onClick={(i)=>{setQuantity(i.quantity+1)}}/>
-                            <input type='number' name='quantity' className='quantity' value={i.quantity} onChange={handleChange}/>
-                        </div>
-                    </div>
+                    <MenuItem key={i.id} quantity={quantity} name={i.name} src={i.src} price={i.price} handleChange={handleChange} handleClick={()=>handleClick(i)}/>
                 )}
-            
-           
-
         </div>
     )
 }
