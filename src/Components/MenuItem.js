@@ -1,48 +1,51 @@
 import { FaCartPlus } from "react-icons/fa";
 import {useState} from 'react';
 
-export default function MenuItem({name,price,src}){
+export default function MenuItem({id,name,price,src}){
     const [quantity,setQuantity] = useState(0);
     const [items,setItems] = useState([]);
-    
+    const [cartQuantity,setcartQuantity] = useState(1);
+
     const handleChange = (e) =>{
         setQuantity(e.target.value);
     }
 
-    const handleClick = (i) =>{
-        const items1 = []
-         if(items1.length===0){
+    const handleClick = () =>{
+         if(items.length===0){
              const newItem = {
-                 id:i.id,
-                 name:i.name,
-                 src:i.src,
-                 price:i.price,
-                 quantity:i.quantity
+                 id:id,
+                 name:name,
+                 src:src,
+                 price:price,
+                 quantity:cartQuantity
             }
-            items1.push(newItem);
-            setItems(items1);
-         }
-         else{ 
-             for (let j=0;j<items1.length;j++){
-                 if(i.id===items1[j].id){
-                     setQuantity(Number(i.quantity)+1);
-                 }else{
-                     const newItem = {
-                         id:i.id,
-                         name:i.name,
-                         src:i.src,
-                         price:i.price,
-                         quantity:i.quantity
-                 }
-                 items1.push(newItem);
-                 setItems(items1);
-             
-                 }
-             }
+            setItems([...items,newItem]);
+         }else{ 
+                const isId = items.find((idval)=>idval.id === id);
+                const index = items.findIndex(idval=>idval.id ===id);
+                console.log("index",index);
+                console.log("isId",isId);
+                if(isId){
+                    alert("Hello");
+                    setcartQuantity(Number(quantity)+1);
+                    items[index] = {...isId,quantity:cartQuantity};
+                    console.log(items);
+                     
+                }else{
+                    const newItem = {
+                        id:id,
+                        name:name,
+                        src:src,
+                        price:price,
+                        quantity:cartQuantity
+                    }
+                    setItems([...items,newItem]);
+                }
          }
         
-        console.log(items1);
+        
      }
+     
     return(
         
             <div className="MenuItem">
@@ -56,7 +59,7 @@ export default function MenuItem({name,price,src}){
                             <FaCartPlus onClick={handleClick}/>
                             <input type='number' name='quantity' className='quantity' value={quantity} placeholder="quantity" onChange={handleChange}/>
                         </div>
-                    </div>
+            </div>
         
         
     )

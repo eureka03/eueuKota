@@ -48,7 +48,7 @@ export default function Menu(){
     return(
         <div className="Menu-config">   
               {Images.map((i)=>
-                    <MenuItem key={i.id}  name={i.name} src={i.src} price={i.price}/>
+                    <MenuItem key={i.id} id={i.id} name={i.name} src={i.src} price={i.price}/>
                 )}
         </div>
     )
