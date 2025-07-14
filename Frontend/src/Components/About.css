@@ -19,7 +19,7 @@
 
 .about-content h2{
     font-size:2.8rem;
-    margin-bottom:1rem;
+    margin-bottom:20px;
 }
 
 .about-content h2 span{
@@ -52,10 +52,11 @@
     }
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
     .about-section{
-        flex-direction:column;
         text-align:center;
+        height:990px;
+        width:500px;
     }
     .about-content,.about-image{
         animation:none;
@@ -65,8 +66,8 @@
     .about-section{
         flex-direction:column;
         text-align:center;
-        height:640px;
-    
+        height:760px;
+        
     }
     .about-content,.about-image{
         animation:none;
