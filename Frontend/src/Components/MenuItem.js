@@ -1,10 +1,10 @@
 import { FaCartPlus } from "react-icons/fa";
 import {useState} from 'react';
 
-export default function MenuItem({id,name,price,src}){
-    const [quantity,setQuantity] = useState(0);
-    const [items,setItems] = useState([]);
-    const [cartQuantity,setcartQuantity] = useState(1);
+export default function MenuItem({id,name,price,src,items,setItems}){
+    const [quantity,setQuantity] = useState(1);
+    
+    
 
     const handleChange = (e) =>{
         setQuantity(e.target.value);
@@ -17,17 +17,18 @@ export default function MenuItem({id,name,price,src}){
                  name:name,
                  src:src,
                  price:price,
-                 quantity:cartQuantity
+                 quantity:quantity
             }
             setItems([...items,newItem]);
+            console.log(items);
          }else{ 
-                const isId = items.find((idval)=>idval.id === id);
+                const isId = items.find((idval)=> idval.id === id);
                 const index = items.findIndex(idval=>idval.id ===id);
                 console.log("index",index);
                 console.log("isId",isId);
                 if(isId){
-                    setcartQuantity(Number(quantity)+1);
-                    items[index] = {...isId,quantity:cartQuantity};
+                    setQuantity(Number(quantity)+1);
+                    items[index] = {...isId,quantity:quantity};
                     console.log(items);
                      
                 }else{
@@ -36,7 +37,7 @@ export default function MenuItem({id,name,price,src}){
                         name:name,
                         src:src,
                         price:price,
-                        quantity:cartQuantity
+                        quantity:quantity
                     }
                     setItems([...items,newItem]);
                 }

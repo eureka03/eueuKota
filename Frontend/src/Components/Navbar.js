@@ -4,10 +4,11 @@ import {Link} from 'react-router-dom';
 import {useState} from 'react';
 import { FaCartShopping } from "react-icons/fa6";
 
-export default function Navbar(){
+export default function Navbar({items}){
     const [isOpen,setIsOpen] = useState(false);
     const toggleMenu = () =>setIsOpen(!isOpen);
     const exitMenu = () =>setIsOpen(false);
+    const length = items.length;
 
     return(
         <nav className="navbar">
@@ -23,7 +24,7 @@ export default function Navbar(){
                     <Link to='/About'>About</Link>
                     <Link to='/Contact'>Contact</Link>
                     <Link to='/Menu'>Menu</Link>
-                    <Link to='/Cart' className="cartcart"><FaCartShopping/><span className='cartCount'>0</span></Link>
+                    <Link to='/Cart' className="cartcart"><FaCartShopping/><span className='cartCount'>{length}</span></Link>
                 </div>
                 <div className="hamburger" onClick={toggleMenu}>
                     <div className={`bar ${isOpen?'open':''}`}></div>
