@@ -5,7 +5,7 @@ import Kota4 from '../Assets/Kota4.jpg';
 import './Menu.css';
 import MenuItem from './MenuItem';
 
-import {useState} from 'react';
+//import {useState} from 'react';
 
 export default function Menu({items,setItems}){
     
@@ -14,28 +14,28 @@ export default function Menu({items,setItems}){
     const Images = [
         {
             id:1,
-            name:'Kota1',
+            name:'FullKota',
             src:Kota1,
             price:30.45
             
         },
         {
             id:2,
-            name:'Kota2',
+            name:'Kota Monster',
             src:Kota2,
             price:50.65
             
         },
         {
             id:3,
-            name:'Kota3',
+            name:'Kota Feast',
             src:Kota3,
             price:23.56
             
         },
         {
             id:4,
-            name:'Kota4',
+            name:'Bite My Kota',
             src:Kota4,
             price:25.54
             

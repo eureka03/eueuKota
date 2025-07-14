@@ -1,0 +1,19 @@
+.Cart h1{
+    text-align:center;
+}
+.cart-item img{
+    width:150px;
+    
+    shadow:10px;
+    margin-right:20px;
+}
+.cart-item{
+    display:flex;
+    margin :30px 50px;
+   
+}
+.cart-message{
+    font-size:4.2rem;
+    margin:10px;
+    text-align:center;
+}
